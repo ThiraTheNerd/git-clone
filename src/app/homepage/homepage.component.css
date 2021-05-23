@@ -1,0 +1,28 @@
+#profile-avatar{
+  margin-top: 30px;
+  border: solid black 2px;
+  border-radius: 120px;
+  
+}
+#ul{
+  list-style-type: none;
+}
+ul#secondary-nav li{
+  float: left;
+  display: block;
+  padding: 18px;
+  
+}
+
+#git-info{
+  list-style-type: none;
+}
+ul#git-info li{
+  display: block;
+  float: left;
+  padding: 10px;
+  margin-left: 0px;
+}
+#design-to-fill-space{
+  color: white;
+}
