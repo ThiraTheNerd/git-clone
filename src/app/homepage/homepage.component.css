@@ -1,7 +1,9 @@
 #profile-avatar{
   margin-top: 30px;
   border: solid black 2px;
-  border-radius: 120px;
+  border-radius: 180px;
+  height: 300px;
+  width: 300px;
   
 }
 #ul{
@@ -25,4 +27,10 @@ ul#git-info li{
 }
 #design-to-fill-space{
   color: white;
+}
+#no-of-repos{
+  background-color: darkgrey;
+  border-radius: 120px;
+  padding: 7px;
+
 }

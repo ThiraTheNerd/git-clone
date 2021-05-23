@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-import { User } from "../user";
+import { HttpService } from '../services/http.service';
+import { User } from '../models/user.model';
 
 @Component({
   selector: 'app-homepage',
@@ -11,20 +12,11 @@ export class HomepageComponent implements OnInit {
 
   user : User;
 
-  constructor(private http:HttpClient) { }
+  constructor(private _http:HttpService) { }
 
   ngOnInit() {
-
-    interface ApiResponse{
-      login: string, 
-      avatar_url: string, 
-      url: string, 
-      public_repos:number
-    }
-
-    this.http.get<ApiResponse>("https://api.github.com/users/ThiraTheNerd").subscribe(data=>{
-      //Successful API request
-      this.user = new User(data.login, data.avatar_url, data.url, data.public_repos)
+    this._http.request().subscribe((response)=> {
+      this.user = new User(response.login, response.avatar_url, response.url,response.public_repos,response.followers, response.following)
     })
   }
 

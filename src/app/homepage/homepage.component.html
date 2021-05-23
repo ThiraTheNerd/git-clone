@@ -10,14 +10,15 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-3">
-      <img id="profile-avatar" src="/src/assets/download.jpeg">
+      <img id="profile-avatar" src="{{user.avatar_url}}">
       <div id="account-info">
-        <h5>Account Name</h5>
+        <h5>{{user.login}}</h5>
         <a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" 
         aria-disabled="true">Edit Profile</a>
         <ul id="git-info">
-          <li>0 Followers</li>
-          <li>1 Following</li>
+          <li>{{user.followers}} Followers</li>
+          <li>{{user.following}} Following</li>
+          <li><img src="https://img.icons8.com/metro/20/000000/star.png"/></li>
 
         </ul>
       </div>
@@ -26,7 +27,7 @@
       <div>
         <ul id="secondary-nav">
           <li>Overview</li>
-          <li>Repositories</li>
+          <li>Repositories <span id="no-of-repos"> {{user.public_repos}}</span></li>
           <li>Projects</li>
           <li>Packages</li>
         </ul>
