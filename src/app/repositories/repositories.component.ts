@@ -18,7 +18,7 @@ export class RepositoriesComponent implements OnInit {
   }
   
   getRepos(){
-    return this._http.request("users","/repos").subscribe((response)=>{
+    return this._http.request("ThiraTheNerd","users","/repos").subscribe((response)=>{
       // console.log(response)
       response.forEach(repo => {
         // eliminating unncessary data

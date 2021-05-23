@@ -11,15 +11,11 @@ export class HttpService {
 
   constructor(private _http:HttpClient) { }
 
-  request(location:string,arg:string="") :Observable<any>{
-    return this._http.get<ApiResponse>(`https://api.github.com/${location}/ThiraTheNerd${arg}`, {
+  request(user:string, location:string,arg:string="") :Observable<any>{
+    return this._http.get<ApiResponse>(`https://api.github.com/${location}/${user}${arg}`, {
     })
   }
   search(search:string="") :Observable<any>{
-    return this._http.get<ApiResponse>(`https://api.github.com/search/code`, {
-      params:{
-        q:search.toLowerCase()
-      }
-    })
+    return this._http.get<ApiResponse>(`https://api.github.com/users/${search}/repos`, )
   }
 }
