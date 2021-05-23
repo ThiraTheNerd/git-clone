@@ -1,3 +1,12 @@
-<p>
-  repositories works!
-</p>
+<div class="repo-container">
+  <div class="row" *ngFor="let repo of repositories">
+    <div class="col">
+      <div class="alert alert-secondary" role="alert">
+        <h4 class="alert-heading">{{repo.name}}</h4>
+        <p>{{repo.description}}</p>
+        <!-- <hr>
+        <p class="mb-0">{{repo.languages_url}}</p> -->
+      </div>
+    </div>
+  </div>
+</div>

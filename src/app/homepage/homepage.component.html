@@ -1,8 +1,8 @@
 <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
     <form class="d-flex">
-      <input class="form-control me-2" type="search" placeholder="Search or jump to .." aria-label="Search">
-      <button class="btn btn-sm btn-outline-success" type="submit">Search</button>
+      <input class="form-control me-2" type="search" placeholder="Search or jump to .." [(ngModel)]="query" aria-label="Search">
+      <button class="btn btn-sm btn-outline-success" type="button" (click)="search()">Search</button>
     </form>
     <a class="navbar-brand">GIT CLONE</a>
   </div>
@@ -27,34 +27,26 @@
       <div>
         <ul id="secondary-nav">
           <li>Overview</li>
-          <li>Repositories <span id="no-of-repos"> {{user.public_repos}}</span></li>
+          <li routerLink="Repositories">Repositories<span id="no-of-repos"> {{user.public_repos}}</span></li>
           <li>Projects</li>
           <li>Packages</li>
         </ul>
       </div>
       <h5 id="design-to-fill-space">Popular Repositories</h5>
       <h5 id="design-to-fill-space">Popular Repositories</h5>
-      <div class="row">
-        <div class="col">
-          <div class="alert alert-secondary" role="alert">
-            <h4 class="alert-heading">Repository Title</h4>
-            <p>Contains Description of the Repository</p>
-            <hr>
-            <p class="mb-0">Language</p>
-          </div>
+      <div class="row" *ngFor="let repo of repositories">
+        <div class="d-flex">
+          <div class="col">
+            <div class="alert alert-secondary" role="alert">
+              <h4 class="alert-heading">{{repo.name}}</h4>
+              <p>{{repo.description}}</p>
+            </div>
         </div>
-        <div class="col">
-          <div class="alert alert-secondary" role="alert">
-            <h4 class="alert-heading">Repository Title</h4>
-            <p>Contains brief description.</p>
-            <hr>
-            <p class="mb-0">Language.</p>
-          </div>
         </div>
+        
       </div>
     </div>
   </div>
 
 </div>
 
-<!-- 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 -->

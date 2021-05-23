@@ -5,7 +5,7 @@
 export const environment = {
   production: false
 };
-
+export let ACCESS_KEY="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"
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
