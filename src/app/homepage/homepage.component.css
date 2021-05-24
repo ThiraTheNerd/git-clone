@@ -39,3 +39,16 @@ ul#git-info li{
     width: 220px;
   }
 }
+@media screen and (max-width: 600px) {
+  #profile-avatar {
+    height: 100px;
+    width: 100px;
+  }
+  #design-to-fill-space{
+    color: white;
+  }
+  #profile-details{
+    display: none;
+  }
+  
+}
