@@ -1,6 +1,6 @@
 # GitClone
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.9.
-To clone this project,
+To clone this project, on the projects folder, run git clone https://github.com/ThiraTheNerd/git-clone.git
 
 ## Development server
 
