@@ -10,11 +10,12 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-3">
-      <img id="profile-avatar" src="{{user.avatar_url}}">
+      <div class="container">
+        <img id="profile-avatar" src="{{user.avatar_url}}">
       <div id="account-info">
         <h5>{{user.login}}</h5>
         <a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" 
-        aria-disabled="true">Edit Profile</a>
+        aria-disabled="true">Profile Details</a>
         <ul id="git-info">
           <li>{{user.followers}} Followers</li>
           <li>{{user.following}} Following</li>
@@ -22,6 +23,9 @@
 
         </ul>
       </div>
+
+      </div>
+      
     </div>
     <div class="col-9">
       <div>
@@ -35,7 +39,7 @@
       <h5 id="design-to-fill-space">Popular Repositories</h5>
       <h5 id="design-to-fill-space">Popular Repositories</h5>
       <div class="row" *ngFor="let repo of repositories">
-        <div class="d-flex">
+        <div class="container-fluid">
           <div class="col">
             <div class="alert alert-secondary" role="alert">
               <h4 class="alert-heading">{{repo.name}}</h4>
