@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ApiResponse } from "../models/api_response.model";
-import { ACCESS_KEY } from "../../environments/environment";
+// import { ACCESS_KEY } from "../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
