@@ -23,9 +23,11 @@ ul#git-info li{
   float: left;
   padding: 10px;
   margin-left: 0px;
+  width: 100%;
 }
 #design-to-fill-space{
   color: white;
+  display: none;
 }
 #no-of-repos{
   background-color: darkgrey;
@@ -44,8 +46,9 @@ ul#git-info li{
     height: 100px;
     width: 100px;
   }
-  #design-to-fill-space{
-    color: white;
+  ul#git-info li{
+    float: none;
+    width: 100%;
   }
   
 }
