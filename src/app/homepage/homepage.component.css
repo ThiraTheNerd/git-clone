@@ -46,8 +46,7 @@ ul#git-info li{
     width: 100px;
   }
   ul#git-info li{
-    float: none;
+    float: right;
     width: 100%;
   }
-  
 }
