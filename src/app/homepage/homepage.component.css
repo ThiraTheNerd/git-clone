@@ -13,10 +13,8 @@
 ul#secondary-nav li{
   float: left;
   display: block;
-  padding: 18px;
-  
+  padding: 18px;  
 }
-
 #git-info{
   list-style-type: none;
 }
@@ -34,4 +32,10 @@ ul#git-info li{
   border-radius: 120px;
   padding: 7px;
 
+}
+@media screen and (max-width: 1290px) {
+  #profile-avatar {
+    height: 220px;
+    width: 220px;
+  }
 }
